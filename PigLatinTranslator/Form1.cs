@@ -47,7 +47,7 @@ namespace PigLatinTranslator
                 string piglatin = "";
                 foreach (string word in words)
                 {
-                    piglatin += TranslateWord(word) + " ";
+                    piglatin += TranslateWordWithCaps(word) + " ";
                 }
                 txtPigLatin.Text = piglatin;
             }
@@ -56,6 +56,22 @@ namespace PigLatinTranslator
                 MessageBox.Show("You must enter some text to translate", "HEY YOU HEFFER ENTER TEXT");
                 txtEnglish.Focus();
             }
+        }
+
+        private string TranslateWordWithCaps(string word)
+        {
+            string punct = "";
+            if (word.EndsWith(".") || word.EndsWith(",") || word.EndsWith(";") || word.EndsWith(":") || word.EndsWith("!")
+                || word.EndsWith("?"))
+            {
+                punct = word.Substring(word.Length - 1);
+                word = word.Remove(word.Length - 1, 1);
+            }
+
+            word = TranslateWord(word);
+            word += punct;
+
+            return word;
         }
 
         private string TranslateWord(string word)
@@ -88,5 +104,6 @@ namespace PigLatinTranslator
             
             return word;
         }
+        
     }
 }
