@@ -93,6 +93,7 @@
             this.btnClear.TabIndex = 5;
             this.btnClear.Text = "&Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnExit
             // 
@@ -102,6 +103,7 @@
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Form1
             // 
