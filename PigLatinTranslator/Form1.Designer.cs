@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEnglish = new System.Windows.Forms.TextBox();
+            this.txtPigLatin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnTranslate = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -43,24 +46,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter English text here:";
             // 
-            // textBox1
+            // txtEnglish
             // 
-            this.textBox1.Location = new System.Drawing.Point(42, 40);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(709, 140);
-            this.textBox1.TabIndex = 1;
+            this.txtEnglish.Location = new System.Drawing.Point(42, 40);
+            this.txtEnglish.Multiline = true;
+            this.txtEnglish.Name = "txtEnglish";
+            this.txtEnglish.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtEnglish.Size = new System.Drawing.Size(709, 140);
+            this.txtEnglish.TabIndex = 1;
             // 
-            // textBox2
+            // txtPigLatin
             // 
-            this.textBox2.Location = new System.Drawing.Point(42, 224);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(709, 140);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtPigLatin.Location = new System.Drawing.Point(42, 224);
+            this.txtPigLatin.Multiline = true;
+            this.txtPigLatin.Name = "txtPigLatin";
+            this.txtPigLatin.ReadOnly = true;
+            this.txtPigLatin.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPigLatin.Size = new System.Drawing.Size(709, 140);
+            this.txtPigLatin.TabIndex = 3;
+            this.txtPigLatin.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -72,17 +76,47 @@
             this.label2.Text = "Pig Latin Translation";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // btnTranslate
+            // 
+            this.btnTranslate.Location = new System.Drawing.Point(42, 397);
+            this.btnTranslate.Name = "btnTranslate";
+            this.btnTranslate.Size = new System.Drawing.Size(142, 31);
+            this.btnTranslate.TabIndex = 4;
+            this.btnTranslate.Text = "&Translate";
+            this.btnTranslate.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(239, 397);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(136, 31);
+            this.btnClear.TabIndex = 5;
+            this.btnClear.Text = "&Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(625, 397);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(126, 31);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "E&xit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 448);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnTranslate);
+            this.Controls.Add(this.txtPigLatin);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEnglish);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "PigLatinTranslator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,9 +125,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEnglish;
+        private System.Windows.Forms.TextBox txtPigLatin;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnTranslate;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 
