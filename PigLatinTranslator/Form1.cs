@@ -124,7 +124,6 @@ namespace PigLatinTranslator
                     return false;
             }
                     return true;
-            
         }
 
         private bool IsLower(string word)
@@ -133,7 +132,6 @@ namespace PigLatinTranslator
             {
                 if (IsLower(word[i]) == false)
                     return false;
-            }
             return true;
         }
 
@@ -143,8 +141,6 @@ namespace PigLatinTranslator
             string otherLetters = word.Remove(0, 1);
             if (IsUpper(firstLetter) && IsLower(otherLetters))
                 return false;
-            else
-                return true;
         }
 
         private bool IsUpper(char c)
